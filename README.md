@@ -50,5 +50,5 @@ The app simplifies soil classification for agricultural planning and soil analys
 ## **Installation**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/soil-classification-app.git
+   git clone https://github.com/yourusername/Soil-Classification-App.git
    cd soil-classification-app
