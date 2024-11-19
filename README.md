@@ -14,7 +14,6 @@ This project is a machine learning-based web application for soil type classific
 7. [Model Architecture](#model-architecture)
 8. [Results](#results)
 9. [Future Improvements](#future-improvements)
-10. [License](#license)
 
 ---
 
@@ -63,4 +62,50 @@ Soil classification plays a crucial role in agricultural planning and soil analy
    Run the following command in your terminal to start the Streamlit app:
    ```bash
    streamlit run app.py
-2. **Open the app in your browser.
+2. Open the app in your browser.
+3. Upload a soil image in .jpg, .jpeg, or .png format.
+4. View the predicted soil type along with a confidence score.
+
+---
+
+## Dataset
+The dataset used for training and evaluation contains images of four soil types:
+   * Black Soil
+   * Cinder Soil
+   * Laterite Soil
+   *  Yellow Soil
+To use this app with your own dataset, replace the existing images and labels in the data directory with your dataset.
+
+---
+
+## Model Architecture
+
+The model is based on the **ResNet50 architecture**:
+
+- **Feature extractor**: Pretrained ResNet50.
+- **Classifier head**:
+  - Fully connected layers:
+    - `512 → BatchNorm → ReLU → Dropout → 256 → BatchNorm → ReLU → Dropout → 4 output classes`.
+
+The final model is trained to classify soil types based on the extracted features.
+
+---
+
+## Results
+
+The model achieved the following performance:
+
+- **Training Accuracy**: 98%
+- **Validation Accuracy**: 96%
+- **Test Accuracy**: 95%
+
+The app provides reliable predictions for real-world soil classification tasks.
+
+---
+
+## Future Improvements
+
+- Expand the dataset to include additional soil types for broader applicability.
+- Deploy the app on cloud platforms such as AWS, Google Cloud, or Heroku.
+- Add confidence scores and explainability features (e.g., Grad-CAM) to enhance user trust.
+- Improve the interface with advanced visualization tools for better user experience.
